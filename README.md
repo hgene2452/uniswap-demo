@@ -22,7 +22,7 @@
     - 수수료는 풀 안에 그냥 쌓여 풀의 잔액을 키우고, LP가 이후 유동성을 회수할 때 더 많은 토큰을 받아가는 구조
   - 프로토콜 수수료 **ON** → 0.25%는 LP에게, 0.05%는 Uniswap 거버넌스 금고(`feeTo`)로 감
 
----
+</br>
 
 ### 1.2 Pair
 
@@ -65,7 +65,7 @@ TWAP = (price0CumulativeLast_T2 - price0CumulativeLast_T1) / (T2 - T1)
 - 가격 계산, 최적 경로 찾기 등 **편의 함수 모음**
 - 주요 함수: `sortTokens()`, `pairFor()`, `getReserves()`, `getAmountOut()`, `getAmountsOut()` 등
 
----
+</br>
 
 ### 2.2 Router
 
@@ -123,7 +123,7 @@ Token → ETH:  Pair에서 WETH 수령 → Router가 withdraw()로 ETH 변환 �
 | approve → transferFrom | 2단계 | allowance 노출 | 불가 |
 | transfer + 잔액차분 | 1단계 | allowance 없음 | 가능 |
 
----
+</br>
 
 ### 3.2 ETH 대신 WETH 사용
 
@@ -138,7 +138,7 @@ V2: Core는 ERC-20만 처리 / ETH 변환은 Periphery(Router)가 전담
 
 > WETH는 "ETH를 ERC-20 세계로 입장시키는 어댑터"
 
----
+</br>
 
 ### 3.3 최소 유동성 소각
 
@@ -193,7 +193,7 @@ TX 2: 유저가 swap() 호출 예정
 
 같은 트랜잭션 내에서 `transfer → swap`이 연속 실행되면 위와 같은 상황 발생하지 않음.
 
----
+</br>
 
 ### 4.2 swap() 파라미터가 출력량인 이유
 
